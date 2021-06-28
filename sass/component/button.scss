@@ -1,0 +1,14 @@
+.btn1{
+    margin-left: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: $font-size-small;
+    color: #40A5A4;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    text-decoration: underline;
+}
