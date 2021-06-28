@@ -244,9 +244,9 @@ body {
     }
 }
 
-@media only screen and (max-width:380px) {
+@media only screen and (min-width: 320px)  and (max-width: 365px){
     .container {
-
+        max-width: 390px;
         &__jobs {
 
             &-items {
@@ -270,7 +270,81 @@ body {
         }
 
         &__search {
-            width: 169%;
+            width: 174%;
+            opacity: 1;
+            height: auto;
+            min-height: 70px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px -7px rgba(93, 164, 164, 1);
+            padding: 20px 40px;
+            box-sizing: border-box;
+            margin-top: -36px;
+            display: flex;
+            justify-content: space-between;
+            transform: opacity 1s;
+    
+    
+    
+    
+    
+        }
+        &__tag {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            padding: 10px 21px;
+            border-radius: 5px;
+            background-color: hsl(180, 31%, 95%);
+            margin: 5px;
+            font-weight: 700;
+            font-size: $font-size-small;
+            color: var(--highlight-text-color);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+    
+        }
+
+        &__features {
+            font-size: 12px;
+            padding: 4px;
+            border: 1px solid var(--highlight-text-color);
+            margin-bottom: 15px;
+            margin-left: 7%;
+            background-color: var(--highlight-text-color);
+            border-radius: 10px;
+            color: #fff;
+        }
+    }
+}
+
+@media only screen and (min-width: 370px) and (max-width:380px) {
+    .container {
+       
+        &__jobs {
+
+            &-items {
+                display: flex;
+                flex-direction: column;
+                width: 123%;
+
+                &-columns{
+                    display: flex;
+                    flex-direction: column;
+
+                    &-left{
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+        }
+
+        &__jobs-img {
+            position: inherit;
+        }
+
+        &__search {
+            width: 165%;
             opacity: 1;
             height: auto;
             min-height: 70px;
@@ -317,4 +391,78 @@ body {
         }
     }
 
+}
+
+@media only screen and (max-width: 415px) and (min-width: 381px){
+    .container {
+        
+        &__jobs {
+
+            &-items {
+                display: flex;
+                flex-direction: column;
+                width: 123%;
+
+                &-columns{
+                    display: flex;
+                    flex-direction: column;
+
+                    &-left{
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+        }
+
+        &__jobs-img {
+            position: inherit;
+        }
+
+        &__search {
+            width: 145%;
+            opacity: 1;
+            height: auto;
+            min-height: 70px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px -7px rgba(93, 164, 164, 1);
+            padding: 20px 40px;
+            box-sizing: border-box;
+            margin-top: -36px;
+            display: flex;
+            justify-content: space-between;
+            transform: opacity 1s;
+    
+    
+    
+    
+    
+        }
+        &__tag {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            padding: 10px 21px;
+            border-radius: 5px;
+            background-color: hsl(180, 31%, 95%);
+            margin: 5px;
+            font-weight: 700;
+            font-size: $font-size-small;
+            color: var(--highlight-text-color);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+    
+        }
+
+        &__features {
+            font-size: 12px;
+            padding: 4px;
+            border: 1px solid var(--highlight-text-color);
+            margin-bottom: 15px;
+            margin-left: 7%;
+            background-color: var(--highlight-text-color);
+            border-radius: 10px;
+            color: #fff;
+        }
+    }
 }
