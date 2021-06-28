@@ -10,7 +10,7 @@ function getJobListingHTML(jobData, filterTags = []) {
   <div class="container__jobs-items">
     <div class="container__jobs-items-columns">
         <div class="container__jobs-items-columns-left">
-            <img src="${jobData.logo}" alt="${jobData.company}" class="jobs-img">
+            <img src="${jobData.logo}" alt="${jobData.company}" class="container__jobs-img">
             <div class="container__jobs-items-columns-left-info">
                 <div class="container__jobs-items-columns-left-info-1">
                     <span class="container__jobs-items-columns-left-info-company">${jobData.company}</span>
@@ -92,6 +92,20 @@ function setJobsListings(filterTags){
   document.getElementById("jobs").innerHTML = jobsListingsHTML;
 }
 
+function displaySearchWrapper(display = false) {
+  const searchWrapper = document.getElementById("search"); 
+
+  if(display){
+    searchWrapper.classList.remove("search--hidden");
+
+    return
+  }
+
+  searchWrapper.classList.add("search--hidden");
+}
+
+
+
 window.addEventListener("click", (e)=>{
   const targetElement = e.target;
   const tagValue = targetElement.innerHTML.trim();
@@ -102,20 +116,33 @@ window.addEventListener("click", (e)=>{
   if(!tagClasses.some(c => targetElement.classList.contains(c))) {
     return;
   }
+
+ 
   const searchContentElement = document.getElementById("search-content"); 
   const searchBarTags = getSearchBarTag(tagValue, searchContentElement);
+
+ 
 
   searchContentElement.innerHTML = searchBarTags.reduce((acc, currentTag) => {
     return acc +  getTagHTML(currentTag, "container-closetag");
   }, "");
 
+  btn.addEventListener("click", ()=>{
+    searchContentElement.innerHTML = "";
+    displaySearchWrapper(false);
+    setJobsListings();
+
+  });
 
 
+  displaySearchWrapper(searchBarTags.length > 0)
   toggleClass(targetElement, "_tag--active");
   setJobsListings(searchBarTags);
 
    
 });
+
+
 
 setJobsListings();
 
