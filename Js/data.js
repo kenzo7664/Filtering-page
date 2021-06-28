@@ -136,7 +136,7 @@ const jobsListings = [
     },
     {
       "id": 10,
-      "company": "The Air Filter Company",
+      "company": "The Air Filter ",
       "logo": "./images/the-air-filter-company.svg",
       "new": false,
       "featured": false,

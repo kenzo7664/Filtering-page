@@ -270,7 +270,7 @@ body {
         }
 
         &__search {
-            width: 173%;
+            width: 169%;
             opacity: 1;
             height: auto;
             min-height: 70px;
@@ -303,6 +303,17 @@ body {
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
     
+        }
+
+        &__features {
+            font-size: 12px;
+            padding: 4px;
+            border: 1px solid var(--highlight-text-color);
+            margin-bottom: 15px;
+            margin-left: 7%;
+            background-color: var(--highlight-text-color);
+            border-radius: 10px;
+            color: #fff;
         }
     }
 
