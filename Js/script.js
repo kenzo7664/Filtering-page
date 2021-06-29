@@ -1,3 +1,24 @@
+let vur = "Jump-start your career today....";
+vur.style.color = "#fff"
+let index = 0;
+
+
+
+function writeText(){
+    header.innerHTML = vur.slice(0, index);
+    
+    
+   
+    index++;
+
+    if(index > vur.length -0){
+        index = 0;
+    }
+}
+
+setInterval(writeText,150)
+
+
 function getTagHTML (tag, tagClass = "container__tag") {
   return  `<span class="${tagClass}">
             ${tag}
