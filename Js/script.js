@@ -1,5 +1,5 @@
 let vur = "Jump-start your career today....";
-vur.style.color = "#fff"
+
 let index = 0;
 
 
